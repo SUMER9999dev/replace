@@ -1,5 +1,3 @@
-import { formatCFrame } from "formatCFrame";
-
 export class Replace {
 	private _position: Vector3;
 	private _rotation: CFrame;
@@ -22,7 +20,7 @@ export class Replace {
 
 	public move(x: number, y: number, z: number) {
 		const resultCFrame = this.toCFrame();
-		const movedCFrame = resultCFrame.add(this._rotation.PointToObjectSpace(new Vector3(x, y, z)));
+		const movedCFrame = resultCFrame.add(this._rotation.PointToWorldSpace(new Vector3(x, y, z)));
 
 		return new Replace(movedCFrame, this._relativeTo);
 	}
