@@ -1,6 +1,6 @@
 {
   "name": "@rbxts/replace",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Helping library implements simpler way working with roblox vectors & cframes",
   "main": "out/init.luau",
   "type": "module",
